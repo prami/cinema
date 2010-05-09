@@ -1,0 +1,48 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+<h1 class="title"><%= @film.title %></h1>
+</p>
+
+<p>
+  <b>Reżyser:</b>
+  <%= @film.director %>
+</p>
+
+<p>
+  <b>Obsasa:</b>
+  <%= @film.cast %>
+</p>
+
+<p>
+  <b>Gatunek:</b>
+  <%= @film.genre %>
+</p>
+
+<p>
+  <b>Czas trwania:</b>
+  <%= @film.run_time %>
+</p>
+
+<p>
+  <b>Premiera:</b>
+  <%= @film.release %>
+</p>
+
+<p>
+  <b>Wersja 3D:</b>
+  <%= @film.version3d ? "Tak" : "Nie" %>
+</p>
+
+<p>
+  <b>Ograniczenia wiekowe:</b>
+  <%= @film.limitation %>
+</p>
+<p>
+  <b>Fabuła:</b>
+  <%= @film.plot %>
+</p>
+
+<%= link_to 'Edycja', edit_film_path(@film) %> |
+<%= link_to 'Powrót', films_path %> |
+<%= link_to 'Seanse', :controller => :showings, :action => :film, :film => @film.id %>

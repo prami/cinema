@@ -1,0 +1,8 @@
+<% grouped_showings.each do |index, showings| %>
+<p>
+  <b><%= link_to showings.first.film.title, film_path(showings.first.film) %></b>
+  <% showings.each do |showing| %>
+    <%= showing.time.strftime('%H:%m') + " sala: "%><%=  link_to(showing.room.name, room_path(showing.room.id))  %>
+  <% end %>
+<% end %>
+  </p>

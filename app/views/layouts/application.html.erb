@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cinema</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag 'jquery-1.4.2.min' %>
+  <%= javascript_include_tag 'json2' %>
+  <%= csrf_meta_tag %>
+ </head>
+  <body>
+    <div id="cointainer">
+      <div id="header">
+        <div id="slogan">
+          <p>Cinema - <span class="taglineEm">System Obsługi Kina</span></p>
+        </div>
+          <div id="navBar">
+            <ul>
+              <li><a class="returnFalse" href="">Film</a>
+                <ul>
+                  <li><%= link_to "Filmy", films_path %></li>
+                  <li class="divider"><%= link_to "Dodaj Film", new_film_path %></li>
+                </ul>
+              </li>
+              <li><a class="returnFalse" href="">Sale</a>
+                <ul>
+                  <li><%= link_to "Sale", rooms_path %></li>
+                   <li><%= link_to "Dodaj Salę", new_room_path %></li>
+                </ul>
+              </li>
+              <li><a class="returnFalse" href="">Seanse</a>
+                <ul>
+                   <li><%= link_to "Seanse", showings_path %></li>
+                   <li><%= link_to "Dodaj Seans", new_showing_path %></li>
+                   <li><%= link_to "Dzisiaj", :controller => :showings, :action => :day_showing, :day => Date.today %></li>
+                   <li><%= link_to "Tydzień", :controller => :showings, :action => :week, :day => Date.today %></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+
+      <div id="page">
+        <%= yield %>
+      </div>
+      <div id="footer">Michał Prawda</div>
+    </div>
+  </body>
+</html>

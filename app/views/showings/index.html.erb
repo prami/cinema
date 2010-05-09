@@ -1,0 +1,29 @@
+<h1>Seanse</h1>
+
+<table>
+  <tr>
+    <th>Film</th>
+    <th>Sala</th>
+    <th>Data</th>
+    <th>Dodatkowe Informacje</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @showings.each do |showing| %>
+    <tr>
+      <td><%= showing.film.title %></td>
+      <td><%= showing.room.name %></td>
+      <td><%= showing.date %></td>
+      <td><%= showing.description %></td>
+      <td><%= link_to image_tag("03/16/02.png", :alt =>'Pokarz'), showing %></td>
+      <td><%= link_to image_tag("01/16/18.png", :alt => "Edytuj"), edit_showing_path(showing) %></td>
+      <td><%= link_to image_tag("03/16/01.png", :alt => "Usuń"), showing, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nowy seans', new_showing_path %>

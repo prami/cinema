@@ -1,0 +1,221 @@
+  .room{
+    min-width: 700px;
+    min-height: 400px;
+    background-color: silver;overflow: scroll;
+    text-align: center;
+  }
+  .chair{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    float: left;
+    border: 1px solid black;
+    margin: 2px 2px 2px 2px;
+    color: white;
+    cursor: pointer;
+  }
+  .disabled{
+    background-color: silver;
+}
+  .row{
+    float: none;
+    display: block;
+    /*background-color: yellow;*/
+    height: 37px;
+    width: 2000px;
+  }
+  .d_chair{
+    background-color: red;
+  }
+  .ecran{
+    width: 400px;
+    height: 20px;
+    color: black;
+    text-align: center;
+  }
+  .container{
+    width: auto;
+    margin-left: auto;
+    margin-right:  auto;
+  }
+html, body {
+                background: #fff;
+            }
+body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333;
+    line-height: 18px;
+}
+#cointainer {
+    position: relative;
+    cursor: default;
+}
+#header {
+    background: #f2f2f2;
+}
+#slogan {
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    background-color: #1a4676;
+    background-image: url(../images/blue_gradient.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+#slogan p {
+    padding: 6px 0 0 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+#navBar {
+    background-color: #e6e6e6;
+    height: 25px;
+    margin: 0 0px;
+    overflow: hidden;
+
+}
+#navBar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 12px;
+}
+
+#navBar li {
+    float: left;
+}
+
+#navBar a {
+    display: block;
+    text-decoration: none;
+}
+
+#navBar ul li a {
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 6px 10px 0px 10px;
+    color: #333;
+    font-weight: normal;
+}
+
+#navBar ul li a:hover {
+    color: #333;
+}
+
+#navBar li ul {
+    padding: 2px;
+    border: 1px solid #3f3f3f;
+    background: #fff url(../images/bg-dropdown.gif) repeat-y;
+    position: absolute;
+    width: 164px;
+    left: -999em;
+    z-index: 8000;
+}
+
+#navBar li:hover ul ul,
+#navBar li.ieHover ul ul,
+#navBar li:hover ul ul ul,
+#navBar li.ieHover ul ul ul {
+    left: -999em;
+}
+
+#navBar li ul ul { /* third-and-above-level lists */
+                   margin: -22px 0 0 163px;
+}
+
+#navBar li ul li .check {
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 5px;
+    height: 5px;
+    background: #555;
+    overflow: hidden;
+}
+
+#navBar li ul li a {
+    position: relative;
+    padding: 1px 9px 1px 25px;
+    width: 130px;
+    color: #3f3f3f;
+    font-weight: normal;
+    background-image: none;
+}
+
+#navBar li ul li a:hover {
+    background: #6C98D9;
+    color: #fff;
+}
+
+#navBar li:hover ul,
+#navBar li li:hover ul,
+#navBar li li li:hover ul {
+    left: auto;
+}
+
+#navBar li:hover { /* For IE7 */
+                   position: static;
+}
+
+li.divider {
+    margin-top: 2px;
+    padding-top: 3px;
+    border-top: 1px solid #ebebeb;
+}
+#page {
+    display: block;
+    width: 900px;
+    border-top: 1px solid #909090;
+    margin-left: auto;
+    margin-right: auto;
+    /*min-height: 400px;*/
+}
+#leftNav{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    padding-right: 0.5em;
+    border-bottom: none;
+    border-left: none;
+}
+#footer {
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    overflow: hidden;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    background: #e6e6e6;
+    border-top: 1px solid #909090;
+}
+
+.title{
+    color: silver;
+    text-decoration: underline;
+}
+.inline{
+    float: left;
+}
+  table{
+ /*width: 100%;*/
+ border: 1px solid black;
+  border-collapse: collapse;
+}
+table td, table th{
+  border: 1px solid black;
+}
+img{
+  border: 0px;
+}

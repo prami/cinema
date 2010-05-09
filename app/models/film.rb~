@@ -1,0 +1,5 @@
+class Film < ActiveRecord::Base
+  has_many :picture
+
+  validate_presence_of :title, :director, :cast, :plot, :genre, :run_time
+end

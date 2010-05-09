@@ -1,0 +1,15 @@
+<div class="room">
+  <div class="container"  >
+    EKRAN
+    <% index = 0 %>
+    <% @rows.each_with_index do |row, i| %>
+      <div class="row" >
+        <div style="float: left; width: 30px;"><%= i.to_s %></div>
+        <% row.each_with_index do |chair, j| %>
+          <div id="<%= i.to_s + "_" + j.to_s %>" class="chair <%= "disabled" if chair == 0 %>"><%= j %></div>
+        <% end %>
+        <div style="float: left; width: 30px;"><%= i.to_s %></div>
+      </div>
+    <% end %>
+  </div>
+</div>

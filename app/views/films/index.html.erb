@@ -1,0 +1,38 @@
+
+<h1>Lista filmów</h1>
+<div class="content">
+  <table>
+  <tr>
+    <th>Tytuł</th>
+    <th>Reżyser</th>
+    <th>Obsada</th>
+    <th>Gatunek</th>
+    <th>Czas trwania</th>
+    <th>Premiera</th>
+    <th>3D</th>
+    <th>Od lat</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @films.each do |film| %>
+  <tr>
+    <td><%= film.title %></td>
+    <td><%= film.director %></td>
+    <td><%= film.cast %></td>
+    <td><%= film.genre %></td>
+    <td><%= film.run_time %></td>
+    <td><%= film.release %></td>
+    <td><%= film.version3d ? "Tak": "Nie" %></td>
+    <td><%= film.limitation %></td>
+    <td><%= link_to image_tag("03/16/02.png", :alt =>'Pokarz'), film %></td>
+    <td><%= link_to image_tag("01/16/18.png", :alt => "Edytuj"), edit_film_path(film) %></td>
+    <td><%= link_to image_tag("03/16/01.png", :alt => "Usuń"), film, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Dodaj Film', new_film_path %>
+</div>

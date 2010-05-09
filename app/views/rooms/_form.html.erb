@@ -1,0 +1,35 @@
+<%= form_for(@room) do |f| %>
+  <% if @room.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
+      <ul>
+        <% @room.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :nazwa_sali %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_field :description %>
+  </div>
+<%= f.hidden_field :chairs %>
+<% if @room.new_record? %>
+  <div class="field">
+    <%= f.label :Liczba_rzędów %><br />
+    <%= f.text_field :rows_no %>
+  </div>
+  <div class="field">
+    <%= f.label 'Maksymalma_liczba_miejsc_w_rzędzie (*)'%><br />
+  <%= f.text_field :chair_no %>
+  </div>
+<p>(*) Podaj maksymalną liczbę miejsc która może wystąpić w jednym żędzie w obrębie sali.</p>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

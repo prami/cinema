@@ -1,0 +1,25 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Film:</b>
+  <%= link_to(@showing.film.title, film_path(@showing.film.id)) %>
+</p>
+
+<p>
+  <b>Sala:</b>
+  <%= link_to(@showing.room.name, room_path(@showing.room.id)) %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= link_to(@showing.date.strftime('%d-%m-%Y'), :action => :day_showing, :day => @showing.date) %>
+</p>
+
+<p>
+  <b>Dodatkowe informacje:</b>
+  <%= @showing.description %>
+</p>
+
+
+<%= link_to 'Edytuj', edit_showing_path(@showing) %> |
+<%= link_to 'Wstecz', showings_path %>

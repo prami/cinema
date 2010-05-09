@@ -1,0 +1,15 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: cinema_development
+  pool: 5
+  username: root
+  password: magik
+  host: localhost
+
+test:
+  development
+
+production:
+  development

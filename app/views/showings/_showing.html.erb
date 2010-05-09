@@ -1,0 +1,20 @@
+<h1 class="title"><%= @showing.first.film.title %></h1>
+
+<% @showing.each do |showing|%>
+<div class="showing" style="border-bottom: 1px solid #909090;">
+<p>
+  <b>Sala:</b>
+  <%= link_to(showing.room.name, room_path(showing.room)) %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= showing.date %>
+</p>
+
+<p>
+  <b>Dodatkowe informacje:</b>
+  <%= showing.description %>
+</p>
+</div>
+<% end %>

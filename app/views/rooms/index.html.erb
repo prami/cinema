@@ -1,0 +1,25 @@
+<h1>Sale kinowe</h1>
+
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <th>Informacje dodatkowe</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rooms.each do |room| %>
+  <tr>
+    <td><%= room.name %></td>
+    <td><%= room.description %></td>
+    <td><%= link_to image_tag("03/16/02.png", :alt =>'Pokarz'), room %></td>
+    <td><%= link_to image_tag("01/16/18.png", :alt => "Edytuj"), edit_room_path(room) %></td>
+    <td><%= link_to image_tag("03/16/01.png", :alt => "Usuń"), room, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nowa Sala', new_room_path %>

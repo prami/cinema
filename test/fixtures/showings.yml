@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  film_id: 1
+  room_id: 1
+  data: 2010-05-08 19:22:37
+  description: MyText
+
+two:
+  film_id: 1
+  room_id: 1
+  data: 2010-05-08 19:22:37
+  description: MyText

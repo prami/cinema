@@ -1,0 +1,23 @@
+<script type="text/javascript">
+  $(function(){
+    $('.chair').click(function(){
+      var chairs = JSON.parse($('#room_chairs').val());
+      var id = $(this).attr('id').split(/_/);
+      var row = parseInt(id[0]);
+      var chair = parseInt(id[1]);
+      chairs[row][chair] == 1 ? chairs[row][chair] = 0 : chairs[row][chair]=1;
+      $('#room_chairs').val(JSON.stringify(chairs));
+      $(this).attr("class") == 'chair ' ? $(this).attr("class", 'chair disabled') && $(this).html("") : $(this).attr("class", 'chair ') && $(this).html(chair);
+    })
+  })
+</script>
+
+<h1>Edytuj sale</h1>
+<%= render 'room' %>
+<div>
+  Kliknij na fotel aby zmienić go na nieaktywny (np. miejsca nie ma ponieważ jest przejście)
+</div>
+<%= render 'form' %>
+
+<%= link_to 'Pokaż', @room %> |
+<%= link_to 'Wstecz', rooms_path %>
