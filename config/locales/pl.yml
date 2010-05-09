@@ -94,6 +94,13 @@ pl:
       user:
         password: "Hasło"
         email: "E-mail"
+      film:
+        title: "tytół"
+        director: "reżyser"
+        cast: "obsada"
+        plot: "fabuła"
+        genre: "gatunek"
+        run_time: "czas trwania"
     errors:
       template:
         header:
