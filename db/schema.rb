@@ -11,21 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20100508172237) do
 
-  create_table "auditoria", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "chairs", :force => true do |t|
-    t.integer  "room_id"
-    t.integer  "row"
-    t.integer  "number"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "films", :force => true do |t|
     t.string  "title",      :null => false
     t.string  "director",   :null => false
@@ -39,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20100508172237) do
   end
 
   create_table "rooms", :force => true do |t|
-    t.string   "name"
+    t.string   "name",        :null => false
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
