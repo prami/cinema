@@ -22,4 +22,5 @@
 
 
 <%= link_to 'Edytuj', edit_showing_path(@showing) %> |
-<%= link_to 'Wstecz', showings_path %>
+<%= link_to 'Wstecz', showings_path %> |
+<%= link_to 'Zarezerwuj miejsce', new_reservation_path(:showing => @showing)%>

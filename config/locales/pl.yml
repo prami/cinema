@@ -90,6 +90,7 @@ pl:
     models:
       showing: "pokaz"
       room: "sala"
+      reservation: "rezerwacja"
     attributes:
       user:
         password: "Hasło"

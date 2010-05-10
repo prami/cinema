@@ -63,7 +63,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     respond_to do |format|
       if @room.update_attributes(params[:room])
-        format.html { redirect_to(@room, :notice => 'Room was successfully updated.') }
+        format.html { redirect_to(@room, :notice => 'Sala została zaktualizowana.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

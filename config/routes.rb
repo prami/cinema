@@ -1,4 +1,6 @@
 Cinema::Application.routes.draw do |map|
+  resources :reservations
+
   resources :showings do
     collection do
       get :day_showing, :film, :room, :week
@@ -8,7 +10,7 @@ Cinema::Application.routes.draw do |map|
   resources :rooms
 
   resources :films
-
+  root :to => "showings#day_showing"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

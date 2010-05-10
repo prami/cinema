@@ -1,5 +1,8 @@
+<div class="week">
+  Dzień
 <% 6.times do |day| %>
   <% date = Date.today + day.days %>
   <%= link_to(date.strftime('%d-%m'), :action => :week, :day => date) %>
 <% end %>
+</div>
 <%= render 'grouped_showings', :grouped_showings => @showing %>

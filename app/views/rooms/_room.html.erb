@@ -6,7 +6,7 @@
       <div class="row" >
         <div style="float: left; width: 30px;"><%= i.to_s %></div>
         <% row.each_with_index do |chair, j| %>
-          <div id="<%= i.to_s + "_" + j.to_s %>" class="chair <%= "disabled" if chair == 0 %>"><%= j %></div>
+          <div id="<%= i.to_s + "_" + j.to_s %>" class="chair <%= "disabled" if chair == 0 %><%= "other_reserved" unless @all_reserved.find_index([i,j]).nil? %><%= "reserved" unless @my_reservations.find_index([i,j]).nil? %>"><%= j %></div>
         <% end %>
         <div style="float: left; width: 30px;"><%= i.to_s %></div>
       </div>

@@ -43,7 +43,7 @@ class ShowingsController < ApplicationController
 
     respond_to do |format|
       if @showing.save
-        format.html { redirect_to(@showing, :notice => 'Showing was successfully created.') }
+        format.html { redirect_to(@showing, :notice => 'Seans został zaktualizowany.') }
         format.xml  { render :xml => @showing, :status => :created, :location => @showing }
       else
         format.html { render :action => "new" }
@@ -81,7 +81,8 @@ class ShowingsController < ApplicationController
   end
 
   def day_showing
-    @showings =  Showing.where("date = ?", params[:day]).group_by{|i| i.film_id}
+    @day = params[:day] || Date.today
+    @showings =  Showing.where("date = ?", @day).group_by{|i| i.film_id}
   end
 
   def film

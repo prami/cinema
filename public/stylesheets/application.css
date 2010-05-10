@@ -18,6 +18,12 @@
   .disabled{
     background-color: silver;
 }
+.reserved{
+    background-color: green;
+}
+.other_reserved{
+    background-color: yellow;
+}
   .row{
     float: none;
     display: block;
@@ -208,7 +214,7 @@ li.divider {
 .inline{
     float: left;
 }
-  table{
+table{
  /*width: 100%;*/
  border: 1px solid black;
   border-collapse: collapse;
@@ -218,4 +224,12 @@ table td, table th{
 }
 img{
   border: 0px;
+}
+.showing{
+ background-color: silver;
+ margin-bottom: 10px;
+}
+.week{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

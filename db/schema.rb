@@ -9,7 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100508172237) do
+ActiveRecord::Schema.define(:version => 20100510035403) do
+
+  create_table "auditoria", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chairs", :force => true do |t|
+    t.integer  "room_id"
+    t.integer  "row"
+    t.integer  "number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "films", :force => true do |t|
     t.string  "title",      :null => false
@@ -23,8 +38,32 @@ ActiveRecord::Schema.define(:version => 20100508172237) do
     t.integer "limitation"
   end
 
+  create_table "reservations", :force => true do |t|
+    t.integer  "showing_id"
+    t.integer  "row"
+    t.integer  "chair"
+    t.string   "name"
+    t.string   "surname"
+    t.string   "phone"
+    t.string   "ticket"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rezervations", :force => true do |t|
+    t.integer  "showing_id"
+    t.integer  "row"
+    t.integer  "chair"
+    t.string   "name"
+    t.string   "surname"
+    t.string   "phone"
+    t.string   "ticket"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "rooms", :force => true do |t|
-    t.string   "name",        :null => false
+    t.string   "name"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
