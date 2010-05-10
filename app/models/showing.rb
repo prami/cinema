@@ -5,7 +5,6 @@ class Showing < ActiveRecord::Base
   belongs_to :film
   belongs_to :room
   validates_presence_of :film_id, :room_id, :date, :time
-  
   def self.group_by_films
     grouped = Showing.active.group_by{|i| i.film_id}
   end

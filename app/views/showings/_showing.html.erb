@@ -1,4 +1,4 @@
-<h1 class="title"><%= @showing.first.film.title %></h1>
+<h1 class="title"><%= @showing.first.film.title unless @showing.empty? %></h1>
 
 <% @showing.each do |showing|%>
 <div class="showing" style="border-bottom: 1px solid #909090;">

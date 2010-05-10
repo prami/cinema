@@ -9,7 +9,14 @@ development:
   host: localhost
 
 test:
-  development
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: cinema_test
+  pool: 5
+  username: root
+  password: magik
+  host: localhost
 
 production:
   development

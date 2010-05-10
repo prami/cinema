@@ -19,7 +19,7 @@
     <%= collection_select(:showing, :room_id, Room.order(:name), :id, :name_with_initial) %>
   </div>
   <div class="field">
-    <%= f.label :data %><br />
+    <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>
   <div class="field">
